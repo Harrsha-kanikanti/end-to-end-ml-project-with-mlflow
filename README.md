@@ -18,28 +18,28 @@
 
 Clone the repository
 
-'''bash
+```bash
 https://github.com/Harrsha-kanikanti/end-to-end-ml-project-with-mlflow
-'''
+```
 ### STEP 01- Create a conda environment after opening the repository
-'''bash
+```bash
 conda create -n mlproj python=3.8 -y
-'''
-'''bash
+```
+```bash
 conda activate mlproj
-'''
+```
 ### STEP 02- install the requirements
-'''bash
+```bash
 pip install -r requirements.txt
-'''
+```
 # Finally run the following command
-'''bash
+```bash
 python app.py
-'''
+```
 Now,
-'''bash
+```bash
 open up you local host and port
-'''
+```
 ## MLflow
 [Documentation](h)
 
@@ -54,7 +54,7 @@ MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0
 python script.py
 
 Run this to export as env variables:
-'''bash
+```bash
 export MLFLOW_TRACKING_URI=https://dagshub.com/saiiharrshakanikanti/end-to-end-ml-project-with-mlflow.mlflow
 
 export MLFLOW_TRACKING_USERNAME=entbappy 
