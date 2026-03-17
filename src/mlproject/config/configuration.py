@@ -1,6 +1,6 @@
 from mlproject.constants import *
 from mlproject.utils.common import read_yaml, create_directories
-from mlproject.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig
+from mlproject.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig, ModelTrainingConfig
 
 
 class ConfigurationManager:
@@ -51,3 +51,20 @@ class ConfigurationManager:
             data_path = config.data_path
         )
         return data_transformation_config
+    
+    def get_model_training_config(self) -> ModelTrainingConfig:
+        config = self.config.data_trainer
+        params = self.params.Elastic_Net
+        schema = self.schema.TARGET_COLUMN
+        create_directories([config.root_dir])
+        
+        model_training_config = ModelTrainingConfig(
+            root_dir = config.root_dir,
+            train_data_path = config.train_data_path,
+            test_data_path = config.test_data_path,
+            model_name = config.model_name,
+            alpha = params.alpha,
+            l1_ratio = params.l1_ratio,
+            target_column= schema.name
+        )
+        return model_training_config
