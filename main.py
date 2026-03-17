@@ -43,8 +43,8 @@ STAGE_NAME = "Model Training Stage"
 
 try:
     logger.info(f"stage {STAGE_NAME} started")
-    obj = ModelTrainingPipeline()
-    obj.main()
+    model_training = ModelTrainingPipeline()
+    model_training.main()
     logger.info(f"stage {STAGE_NAME} completed")
 except Exception as e:
     logger.exception(e)
